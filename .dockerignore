@@ -1,0 +1,9 @@
+node_modules
+.next
+.git
+.gitignore
+.env
+.env.local
+# Se regenera durante el build (scripts/copiar-ia.js)
+public/vendor
+npm-debug.log*

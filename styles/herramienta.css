@@ -1,0 +1,121 @@
+/* Laboratorio de imágenes: piezas propias de las herramientas (el resto viene de globals.css). */
+.damero {
+  background-color: #fff;
+  background-image: linear-gradient(45deg, #e6e2ec 25%, transparent 25%, transparent 75%, #e6e2ec 75%), linear-gradient(45deg, #e6e2ec 25%, transparent 25%, transparent 75%, #e6e2ec 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+.seg {
+  display: inline-flex;
+  border: 1px solid var(--borde-campo);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  max-width: 100%;
+}
+.seg button {
+  border: none;
+  background: #fff;
+  padding: 0 12px;
+  min-height: 34px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--texto-2);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.seg button + button {
+  border-left: 1px solid var(--borde-campo);
+}
+.seg button[aria-pressed="true"] {
+  background: var(--morado);
+  color: #fff;
+}
+.seg button:not([aria-pressed="true"]):hover {
+  background: var(--muted);
+}
+.seg button:focus-visible {
+  outline: 2px solid var(--turquesa);
+  outline-offset: -2px;
+}
+input[type="range"].slider {
+  width: 100%;
+  accent-color: var(--morado);
+  height: 22px;
+  margin: 0;
+}
+.herramienta {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 1024px) {
+  .herramienta {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    align-items: start;
+  }
+  .herramienta > .panel {
+    position: sticky;
+    top: 16px;
+  }
+}
+.zona-subida {
+  border: 2px dashed var(--borde-campo);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.zona-subida:hover,
+.zona-subida.arriba {
+  border-color: var(--morado);
+  background: #fff;
+}
+.zona-subida:focus-visible {
+  outline: 2px solid var(--turquesa);
+  outline-offset: 2px;
+}
+.etiqueta-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--texto);
+}
+.etiqueta-campo .valor {
+  float: right;
+  color: var(--texto-3);
+  font-weight: 400;
+}
+.ayuda {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--texto-3);
+  font-weight: 400;
+}
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--texto);
+  cursor: pointer;
+}
+.check input {
+  margin-top: 3px;
+  accent-color: var(--morado);
+}
+.chip-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--texto-2);
+  background: var(--muted);
+  border-radius: 6px;
+  padding: 3px 8px;
+}
